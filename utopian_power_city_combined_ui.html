@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#14271d">
+    <link rel="icon" type="image/png" href="/logo.png">
+    
+    <title>Utopian Power City | The AeroVate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: "#14271d",
+                        green: "#315b43",
+                        sage: "#dce8d5",
+                        cream: "#f6f6f0",
+                        ink: "#17251e",
+                        muted: "#718076",
+                        line: "#e5e9df"
+                    },
+                    fontFamily: {
+                        sans: ["DM Sans", "sans-serif"],
+                        display: ["Manrope", "sans-serif"]
+                    },
+                    boxShadow: {
+                        soft: "0 18px 50px #15291b0c"
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: "DM Sans", sans-serif;
+        }
+
+        .font-display {
+            font-family: "Manrope", sans-serif;
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(90deg, #0d2419e8, #0d24198c 48%, #0d24190a),
+                url("https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=2200&q=90");
+            background-position: center;
+            background-size: cover;
+        }
+
+        .vision-bg {
+            background-image: url("https://redactive--drupal--eandt--public-files.s3.eu-west-2.amazonaws.com/s3fs-public/styles/uncropped_medium/public/2024-07/web_p54-58_Influence-AI-Architecture_zaha-hadid-bjarke-ingels-sunny-daylight-aerial-view-solar_CREDIT_Tim-Fu-Midjourney.jpg?VersionId=YFeXng8T_6AX9h4PVKyhGOCag6d0EswX&itok=qKQR2sjI");
+            background-position: center;
+            background-size: cover;
+        }
+
+        .vertical-writing {
+            writing-mode: vertical-rl;
+        }
+    </style>
+</head>
+
+<body class="m-0 bg-cream text-ink antialiased">
+    <!-- Sticky navigation -->
+    <header
+        class="fixed inset-x-0 top-0 z-50 border-b border-white/15 bg-forest/85 text-white shadow-lg shadow-black/10 backdrop-blur-xl">
+        <div class="mx-auto flex h-[76px] w-[min(1160px,calc(100%-32px))] items-center justify-between">
+            <a href="#top" class="group flex items-center gap-3" aria-label="Utopian Power City home">
+                <img src="logo.png" alt="" class="grid h-9 w-10 place-items-center rounded-xl"
+                    >
+                <span class="font-display text-[16px] font-extrabold tracking-[.08em] sm:text-[13px]">UTOPIAN POWER CITY
+                    <span class="mt-1 block text-[10px] font-semibold tracking-[.28em] text-white/65">BY THE
+                        AEROVATE</span>
+                </span>
+            </a>
+            <nav id="desktopNav" class="hidden items-center gap-2 lg:flex" aria-label="Main navigation">
+                <a class="nav-link rounded-full px-4 py-2 text-[14px] font-semibold text-white/80 transition hover:bg-white/10 hover:text-lime-200"
+                    href="#vision">Vision</a>
+                <a class="nav-link rounded-full px-4 py-2 text-[14px] font-semibold text-white/80 transition hover:bg-white/10 hover:text-lime-200"
+                    href="#masterplan">Masterplan</a>
+                <a class="nav-link rounded-full px-4 py-2 text-[14px] font-semibold text-white/80 transition hover:bg-white/10 hover:text-lime-200"
+                    href="#innovation">Innovation</a>
+                <a class="nav-link rounded-full px-4 py-2 text-[14px] font-semibold text-white/80 transition hover:bg-white/10 hover:text-lime-200"
+                    href="#energy">Green Energy</a>
+                <a class="nav-link rounded-full px-4 py-2 text-[14px] font-semibold text-white/80 transition hover:bg-white/10 hover:text-lime-200"
+                    href="#team">Team</a>
+            </nav>
+            <a href="#masterplan"
+                class="hidden rounded-full border border-lime-200/70 bg-lime-200 px-5 py-3 text-[14px] font-bold text-forest shadow-md shadow-black/10 transition hover:-translate-y-0.5 hover:bg-lime-100 lg:inline-flex ">Explore
+                Project ↗</a>
+            <button id="menuBtn"
+                class="grid h-10 w-10 place-items-center rounded-xl border border-white/20 text-xl transition hover:bg-white/10 lg:hidden"
+                aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav">
+                <span id="menuIcon">☰</span>
+            </button>
+        </div>
+        <nav id="mobileNav" class="hidden border-t border-white/10 bg-forest/95 px-4 py-3 backdrop-blur-xl lg:hidden"
+            aria-label="Mobile navigation">
+            <div class="mx-auto flex w-full max-w-6xl flex-col gap-1">
+                <a class="mobile-link rounded-lg px-4 py-3 text-md text-white/85 hover:bg-white/10"
+                    href="#vision">Vision</a>
+                <a class="mobile-link rounded-lg px-4 py-3 text-md text-white/85 hover:bg-white/10"
+                    href="#masterplan">Masterplan</a>
+                <a class="mobile-link rounded-lg px-4 py-3 text-md text-white/85 hover:bg-white/10"
+                    href="#innovation">Innovation</a>
+                <a class="mobile-link rounded-lg px-4 py-3 text-md text-white/85 hover:bg-white/10" href="#energy">Green
+                    Energy</a>
+                <a class="mobile-link rounded-lg px-4 py-3 text-md text-white/85 hover:bg-white/10"
+                    href="#team">Team</a>
+                <a class="mt-2 rounded-lg bg-lime-200 px-4 py-3 text-center text-md font-bold text-forest"
+                    href="#masterplan">Explore Project ↗</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="top">
+        <!-- Hero -->
+        <section class="hero-bg relative flex min-h-[680px] items-center overflow-hidden pt-24 text-white md:h-[730px]">
+            <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-cream"></div>
+            <div class="relative z-10 mx-auto w-[min(1160px,calc(100%-32px))]">
+                <div class="max-w-[650px] pb-12 pt-10">
+                    <div class="text-[13px] font-bold uppercase tracking-[.27em] text-sage sm:text-[14px]">A new standard
+                        for urban living · Bangladesh</div>
+                    <h1
+                        class="mt-6 font-display text-[clamp(3.2rem,7vw,5.6rem)] font-extrabold leading-[.98] tracking-[-.055em]">
+                        Build a city.<br><span class="text-sage">Grow a future.</span></h1>
+                    <p class="mt-6 max-w-[500px] text-[14px] leading-8 text-[#e1e9df] sm:text-md">A visionary 150-acre
+                        smart city concept where clean energy, intelligent infrastructure and nature work together to
+                        create a better way of living.</p>
+                    <div class="mt-8 flex flex-wrap gap-3">
+                        <a href="#vision"
+                            class="rounded-full bg-sage px-5 py-3.5 text-[14px] font-bold text-forest transition hover:-translate-y-1 hover:bg-lime-100">Discover
+                            the vision ↗</a>
+                        <a href="#masterplan"
+                            class="rounded-full border border-white/50 bg-white/10 px-5 py-3.5 text-[14px] font-bold text-white backdrop-blur transition hover:-translate-y-1 hover:bg-white/20">View
+                            masterplan</a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="vertical-writing absolute bottom-32 right-[5%] z-10 hidden text-[12px] tracking-[.25em] text-white/80 md:block">
+                SMART · SUSTAINABLE · SELF-SUSTAINING</div>
+        </section>
+
+        <!-- Stats -->
+        <div class="relative z-20 mx-auto -mt-10 w-[min(1160px,calc(100%-32px))]">
+            <div
+                class="grid grid-cols-2 rounded-2xl border border-line bg-[#fffefa] px-2 py-5 shadow-soft md:grid-cols-4 md:px-3">
+                <div class="border-b border-line px-3 py-3 sm:px-6 md:border-b-0 md:border-r"><b
+                        class="font-display text-2xl font-extrabold text-green sm:text-[29px]">150 ACRES</b><span
+                        class="mt-1.5 block text-[12px] text-muted sm:text-[12px]">Planned development area</span></div>
+                <div class="border-b border-line px-3 py-3 sm:px-6 md:border-b-0 md:border-r"><b
+                        class="font-display text-2xl font-extrabold text-green sm:text-[29px]">7</b><span
+                        class="mt-1.5 block text-[12px] text-muted sm:text-[12px]">Integrated urban zones</span></div>
+                <div class="px-3 py-3 sm:px-6 md:border-r md:border-line"><b
+                        class="font-display text-2xl font-extrabold text-green sm:text-[29px]">80%+</b><span
+                        class="mt-1.5 block text-[12px] text-muted sm:text-[12px]">Renewable energy target</span></div>
+                <div class="px-3 py-3 sm:px-6"><b
+                        class="font-display text-2xl font-extrabold text-green sm:text-[29px]">৳1,950Cr</b><span
+                        class="mt-1.5 block text-[12px] text-muted sm:text-[12px]">Estimated project budget</span></div>
+            </div>
+        </div>
+
+        <!-- Vision -->
+        <section id="vision" class="scroll-mt-24 py-20 sm:py-24">
+            <div class="mx-auto w-[min(1160px,calc(100%-32px))]">
+                <div class="mb-9 flex flex-col items-start justify-between gap-5 md:flex-row md:items-end">
+                    <div>
+                        <div class="text-[12px] font-bold uppercase tracking-[.27em] text-[#66876b]">01 / THE BIG IDEA
+                        </div>
+                        <h2
+                            class="mt-3 font-display text-4xl font-extrabold leading-tight tracking-[-.04em] sm:text-5xl">
+                            More than a city.<br>A living ecosystem.</h2>
+                    </div>
+                    <p class="max-w-[350px] text-[13px] leading-7 text-muted">Utopian Power City brings homes, mobility,
+                        public services and green infrastructure into one connected urban vision.</p>
+                </div>
+                <div class="grid gap-5 lg:grid-cols-[1.1fr_.9fr]">
+                    <div class="vision-bg relative min-h-[340px] overflow-hidden rounded-[22px] sm:h-[420px]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#10251b]/90 via-transparent to-transparent">
+                        </div>
+                        <div class="absolute bottom-6 left-6 z-10 text-white sm:bottom-7 sm:left-7">
+                            <h3 class="font-display text-2xl font-bold sm:text-[27px]">Designed around life.</h3>
+                            <p class="mt-2 max-w-[420px] text-[13px] leading-6 text-[#e5ece4]">A people-first urban
+                                environment shaped by nature, thoughtful architecture and responsible technology.</p>
+                        </div>
+                    </div>
+                    <div class="grid gap-4">
+                        <article class="flex gap-4 rounded-[19px] border border-line bg-[#fffefa] p-5 sm:p-6">
+                            <div
+                                class="grid h-11 w-11 shrink-0 place-items-center rounded-[14px] bg-[#eaf0e3] text-xl text-green">
+                                ⌂</div>
+                            <div>
+                                <h3 class="font-display text-base font-bold">Human-centred living</h3>
+                                <p class="mt-1.5 text-[12px] leading-6 text-muted">Comfortable neighbourhoods,
+                                    accessible civic spaces and essential services planned together.</p>
+                            </div>
+                        </article>
+                        <article class="flex gap-4 rounded-[19px] border border-line bg-[#fffefa] p-5 sm:p-6">
+                            <div
+                                class="grid h-11 w-11 shrink-0 place-items-center rounded-[14px] bg-[#eaf0e3] text-xl text-green">
+                                ♧</div>
+                            <div>
+                                <h3 class="font-display text-base font-bold">Nature in the urban fabric</h3>
+                                <p class="mt-1.5 text-[12px] leading-6 text-muted">Connected green spaces,
+                                    water-sensitive planning and landscape-led public places.</p>
+                            </div>
+                        </article>
+                        <article class="flex gap-4 rounded-[19px] border border-line bg-[#fffefa] p-5 sm:p-6">
+                            <div
+                                class="grid h-11 w-11 shrink-0 place-items-center rounded-[14px] bg-[#eaf0e3] text-2xl text-green">
+                                ⌁</div>
+                            <div>
+                                <h3 class="font-display text-base font-bold">Intelligence by design</h3>
+                                <p class="mt-1.5 text-[12px] leading-6 text-muted">Smart monitoring and integrated
+                                    systems designed to support efficient city operations.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Masterplan -->
+        <section id="masterplan" class="scroll-mt-24 bg-[#e9eee4] py-20 sm:py-24">
+            <div class="mx-auto grid w-[min(1160px,calc(100%-32px))] items-center gap-10 lg:grid-cols-2 lg:gap-14">
+                <div class="relative h-[350px] overflow-hidden rounded-[23px] bg-[#d5e3d0] sm:h-[460px]">
+                    <img class="h-full w-full object-cover opacity-90 mix-blend-multiply"
+                        src="https://images.pexels.com/photos/34276140/pexels-photo-34276140.jpeg"
+                        alt="Urban planning inspiration">
+                    <span
+                        class="absolute left-5 top-5 rounded-full bg-[#fffdf0e8] px-4 py-2.5 text-[12px] font-bold tracking-widest text-green">150-ACRE
+                        MASTERPLAN</span>
+                </div>
+                <div>
+                    <div class="text-[12px] font-bold uppercase tracking-[.27em] text-[#66876b]">02 / SPATIAL PLANNING
+                    </div>
+                    <h2 class="mt-3 font-display text-5xl font-extrabold leading-tight tracking-[-.04em] sm:text-5xl">
+                        Every space has<br>a purpose.</h2>
+                    <p class="mt-4 text-sm leading-7 text-muted">A balanced land-use framework connects residential,
+                        civic, commercial and ecological functions across the proposed development.</p>
+                    <div class="mt-6 grid gap-4">
+                        <div class="grid grid-cols-[1fr_auto] gap-2 text-[12px]"><b>CEB Duplex Housing</b><span
+                                class="font-bold text-green">30% · 45 acres</span>
+                            <div class="col-span-2 -mt-1 h-1.5 overflow-hidden rounded-full bg-[#d4ded0]"><i
+                                    class="block h-full w-[30%] rounded-full bg-[#66876b]"></i></div>
+                        </div>
+                        <div class="grid grid-cols-[1fr_auto] gap-2 text-[12px]"><b>Apartment Zone</b><span
+                                class="font-bold text-green">16% · 24 acres</span>
+                            <div class="col-span-2 -mt-1 h-1.5 overflow-hidden rounded-full bg-[#d4ded0]"><i
+                                    class="block h-full w-[16%] rounded-full bg-[#66876b]"></i></div>
+                        </div>
+                        <div class="grid grid-cols-[1fr_auto] gap-2 text-[12px]"><b>Education, Health & Civic</b><span
+                                class="font-bold text-green">15% · 22.5 acres</span>
+                            <div class="col-span-2 -mt-1 h-1.5 overflow-hidden rounded-full bg-[#d4ded0]"><i
+                                    class="block h-full w-[15%] rounded-full bg-[#66876b]"></i></div>
+                        </div>
+                        <div class="grid grid-cols-[1fr_auto] gap-2 text-[12px]"><b>Roads & Transport</b><span
+                                class="font-bold text-green">15% · 22.5 acres</span>
+                            <div class="col-span-2 -mt-1 h-1.5 overflow-hidden rounded-full bg-[#d4ded0]"><i
+                                    class="block h-full w-[15%] rounded-full bg-[#66876b]"></i></div>
+                        </div>
+                        <div class="grid grid-cols-[1fr_auto] gap-2 text-[12px]"><b>Parks, Water & Sports</b><span
+                                class="font-bold text-green">10% · 15 acres</span>
+                            <div class="col-span-2 -mt-1 h-1.5 overflow-hidden rounded-full bg-[#d4ded0]"><i
+                                    class="block h-full w-[10%] rounded-full bg-[#66876b]"></i></div>
+                        </div>
+                        <div class="grid grid-cols-[1fr_auto] gap-2 text-[12px]"><b>Commercial</b><span
+                                class="font-bold text-green">7% · 10.5 acres</span>
+                            <div class="col-span-2 -mt-1 h-1.5 overflow-hidden rounded-full bg-[#d4ded0]"><i
+                                    class="block h-full w-[7%] rounded-full bg-[#66876b]"></i></div>
+                        </div>
+                        <div class="grid grid-cols-[1fr_auto] gap-2 text-[12px]"><b>Utilities & Green Energy</b><span
+                                class="font-bold text-green">7% · 10.5 acres</span>
+                            <div class="col-span-2 -mt-1 h-1.5 overflow-hidden rounded-full bg-[#d4ded0]"><i
+                                    class="block h-full w-[7%] rounded-full bg-[#66876b]"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Innovation -->
+        <section id="innovation" class="scroll-mt-24 py-20 sm:py-24">
+            <div class="mx-auto w-[min(1160px,calc(100%-32px))]">
+                <div class="mb-9 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+                    <div>
+                        <div class="text-[11px] font-bold uppercase tracking-[.27em] text-[#66876b]">03 / FUTURE-READY
+                            SYSTEMS</div>
+                        <h2
+                            class="mt-3 font-display text-4xl font-extrabold leading-tight tracking-[-.04em] sm:text-5xl">
+                            Technology with<br>a lighter footprint.</h2>
+                    </div>
+                    <p class="max-w-[350px] text-sm leading-7 text-muted">Digital infrastructure and sustainable design
+                        work side by side to make the city more responsive and resource-aware.</p>
+                </div>
+                <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                    <article
+                        class="overflow-hidden rounded-[20px] border border-line bg-[#fffefa] transition duration-300 hover:-translate-y-1.5">
+                        <img class="h-[185px] w-full object-cover"
+                            src="Connected City Systems.png"
+                            alt="Modern architecture">
+                        <div class="p-5"><small class="text-[12px] font-bold tracking-[.2em] text-[#66876b]">01 / SMART
+                                INFRASTRUCTURE</small>
+                            <h3 class="mt-2 font-display text-[19px] font-bold">Connected City Systems</h3>
+                            <p class="mt-2 text-[12px] leading-6 text-muted">IoT-enabled monitoring, integrated control
+                                systems and data-informed operations.</p>
+                        </div>
+                    </article>
+                    <article
+                        class="overflow-hidden rounded-[20px] border border-line bg-[#fffefa] transition duration-300 hover:-translate-y-1.5">
+                        <img class="h-[185px] w-full object-cover"
+                            src="https://www.archsd.gov.hk/archsd/html/report2025/assets/images/img/casestudy/7/key-1.jpg"
+                            alt="Green landscape">
+                        <div class="p-5"><small class="text-[12px] font-bold tracking-[.2em] text-[#66876b]">02 /
+                                BLUE-GREEN NETWORK</small>
+                            <h3 class="mt-2 font-display text-[19px] font-bold">Sponge City Approach</h3>
+                            <p class="mt-2 text-[12px] leading-6 text-muted">Landscape, water-sensitive design and green
+                                corridors to support urban resilience.</p>
+                        </div>
+                    </article>
+                    <article
+                        class="overflow-hidden rounded-[20px] border border-line bg-[#fffefa] transition duration-300 hover:-translate-y-1.5">
+                        <img class="h-[185px] w-full object-cover"
+                            src="Inclusive Public Realm.png"
+                            alt="Contemporary public interior">
+                        <div class="p-5"><small class="text-[12px] font-bold tracking-[.2em] text-[#66876b]">03 /
+                                COMMUNITY FIRST</small>
+                            <h3 class="mt-2 font-display text-[19px] font-bold">Inclusive Public Realm</h3>
+                            <p class="mt-2 text-[12px] leading-6 text-muted">Welcoming public spaces and essential
+                                facilities designed around everyday needs.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Energy -->
+        <section id="energy" class="scroll-mt-24 bg-forest py-20 text-white sm:py-24">
+            <div class="mx-auto w-[min(1160px,calc(100%-32px))]">
+                <div class="mb-9 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+                    <div>
+                        <div class="text-[11px] font-bold uppercase tracking-[.27em] text-sage">04 / ENERGY & ECOLOGY
+                        </div>
+                        <h2
+                            class="mt-3 font-display text-4xl font-extrabold leading-tight tracking-[-.04em] sm:text-5xl">
+                            Powering progress.<br>Protecting nature.</h2>
+                    </div>
+                    <p class="max-w-[350px] text-sm leading-7 text-[#b7c4b9]">Renewable energy, resource recovery and
+                        urban agriculture are key parts of the project's sustainability ambition.</p>
+                </div>
+                <div class="grid gap-4 md:grid-cols-2">
+                    <article class="relative h-[290px] overflow-hidden rounded-[20px]"><img
+                            class="h-full w-full object-cover opacity-50"
+                            src="solar panel.png"
+                            alt="Solar panels">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#10251b]/90 to-transparent"></div>
+                        <div class="absolute bottom-6 left-7 right-6">
+                            <h3 class="font-display text-[24px] font-bold">Solar-powered future</h3>
+                            <p class="mt-2 text-[12px] leading-6 text-[#e0e9e1]">Solar integration, building-integrated
+                                photovoltaics and agrivoltaic opportunities.</p>
+                        </div>
+                    </article>
+                    <article class="relative h-[290px] overflow-hidden rounded-[20px]"><img
+                            class="h-full w-full object-cover opacity-50"
+                            src="Nature Positive Spaces.png"
+                            alt="Natural landscape">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#10251b]/90 to-transparent"></div>
+                        <div class="absolute bottom-6 left-7 right-6">
+                            <h3 class="font-display text-[24px] font-bold">Nature-positive spaces</h3>
+                            <p class="mt-2 text-[12px] leading-6 text-[#e0e9e1]">Green networks, water systems and
+                                biodiversity-conscious landscape planning.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Roadmap -->
+        <section class="py-20 sm:py-24">
+            <div class="mx-auto w-[min(1160px,calc(100%-32px))]">
+                <div class="mb-9 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+                    <div>
+                        <div class="text-[11px] font-bold uppercase tracking-[.27em] text-[#66876b]">05 / DELIVERY
+                            ROADMAP</div>
+                        <h2
+                            class="mt-3 font-display text-4xl font-extrabold leading-tight tracking-[-.04em] sm:text-5xl">
+                            From vision to<br>real-world impact.</h2>
+                    </div>
+                    <p class="max-w-[350px] text-sm leading-7 text-muted">A phased approach supports research, planning,
+                        prototyping and long-term implementation.</p>
+                </div>
+                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                    <article class="border-t-2 border-[#b9c8b6] pt-4"><b
+                            class="font-display text-[11px] tracking-widest text-[#66876b]">PHASE 01</b>
+                        <h3 class="mt-3 font-display text-[17px] font-bold">Research & feasibility</h3>
+                        <p class="mt-2 text-[12px] leading-6 text-muted">Site analysis, baseline data, needs assessment
+                            and feasibility studies.</p>
+                    </article>
+                    <article class="border-t-2 border-[#b9c8b6] pt-4"><b
+                            class="font-display text-[11px] tracking-widest text-[#66876b]">PHASE 02</b>
+                        <h3 class="mt-3 font-display text-[17px] font-bold">Design & development</h3>
+                        <p class="mt-2 text-[12px] leading-6 text-muted">Masterplanning, engineering coordination and
+                            system design.</p>
+                    </article>
+                    <article class="border-t-2 border-[#b9c8b6] pt-4"><b
+                            class="font-display text-[11px] tracking-widest text-[#66876b]">PHASE 03</b>
+                        <h3 class="mt-3 font-display text-[17px] font-bold">Prototype & validation</h3>
+                        <p class="mt-2 text-[12px] leading-6 text-muted">Test key technologies, evaluate performance and
+                            refine solutions.</p>
+                    </article>
+                    <article class="border-t-2 border-[#b9c8b6] pt-4"><b
+                            class="font-display text-[11px] tracking-widest text-[#66876b]">PHASE 04</b>
+                        <h3 class="mt-3 font-display text-[17px] font-bold">Implementation</h3>
+                        <p class="mt-2 text-[12px] leading-6 text-muted">Phased construction, monitoring and continuous
+                            improvement.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team -->
+        <section id="team" class="scroll-mt-24 bg-[#edf0e8] py-20 sm:py-24">
+            <div class="mx-auto w-[min(1160px,calc(100%-32px))]">
+                <div
+                    class="flex flex-col justify-between gap-7 rounded-[22px] border border-line bg-[#fffefa] p-6 sm:p-9 lg:flex-row lg:items-center">
+                    <div>
+                        <div class="text-[11px] font-bold uppercase tracking-[.27em] text-[#66876b]">06 / THE PEOPLE
+                            BEHIND THE VISION</div>
+                        <h2 class="mt-3 font-display text-3xl font-extrabold tracking-[-.04em] sm:text-[35px]">Meet The
+                            AeroVate.</h2>
+                        <p class="mt-3 max-w-[460px] text-sm leading-7 text-muted">A team united by a shared ambition to
+                            imagine a smarter, greener and more liveable urban future. Project targets are planning
+                            ambitions, not completed outcomes.</p>
+                    </div>
+                    <div class="grid w-full grid-cols-1 gap-2.5 sm:grid-cols-2 lg:max-w-[390px]">
+                        <div class="rounded-xl bg-[#eff3eb] p-3 text-[14px] font-bold">Riaz Uddin Ahmed<small
+                                class="mt-1 block text-[12px] font-normal text-muted">Team Leader</small></div>
+                        <div class="rounded-xl bg-[#eff3eb] p-3 text-[14px] font-bold">Kazi Saif Uddin Siam<small
+                                class="mt-1 block text-[12px] font-normal text-muted">Team Member</small></div>
+                        <div class="rounded-xl bg-[#eff3eb] p-3 text-[14px] font-bold">Sumayea Akter<small
+                                class="mt-1 block text-[12px] font-normal text-muted">Team Member</small></div>
+                        <div class="rounded-xl bg-[#eff3eb] p-3 text-[14px] font-bold">Zarin Tabassum Roshni<small
+                                class="mt-1 block text-[12px] font-normal text-muted">Team Member</small></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#12241a] py-8 text-[#dce6dc]">
+        <div
+            class="mx-auto flex w-[min(1160px,calc(100%-32px))] flex-col gap-3 text-[10px] sm:flex-row sm:items-center sm:justify-between">
+            <b>UTOPIAN POWER CITY <small class="text-[#9aab9d]">· A THE AEROVATE PROJECT</small></b>
+            <small class="text-[#9aab9d]">SMART · SUSTAINABLE · SELF-SUSTAINING</small>
+            <small class="text-[#9aab9d]">© 2026 The AeroVate</small>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileNav = document.getElementById("mobileNav");
+        const menuIcon = document.getElementById("menuIcon");
+
+        menuBtn.addEventListener("click", () => {
+            const isOpen = !mobileNav.classList.contains("hidden");
+            mobileNav.classList.toggle("hidden");
+            menuBtn.setAttribute("aria-expanded", String(!isOpen));
+            menuBtn.setAttribute("aria-label", isOpen ? "Open navigation menu" : "Close navigation menu");
+            menuIcon.textContent = isOpen ? "☰" : "✕";
+        });
+
+        document.querySelectorAll(".mobile-link, #mobileNav a[href='#masterplan']").forEach(link => {
+            link.addEventListener("click", () => {
+                mobileNav.classList.add("hidden");
+                menuBtn.setAttribute("aria-expanded", "false");
+                menuBtn.setAttribute("aria-label", "Open navigation menu");
+                menuIcon.textContent = "☰";
+            });
+        });
+
+        const sections = document.querySelectorAll("main section[id]");
+        const navLinks = document.querySelectorAll(".nav-link");
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => {
+                        const active = link.getAttribute("href") === `#${entry.target.id}`;
+                        link.classList.toggle("bg-white/10", active);
+                        link.classList.toggle("text-lime-200", active);
+                        link.classList.toggle("text-white/80", !active);
+                    });
+                }
+            });
+        }, { rootMargin: "-35% 0px -55% 0px" });
+        sections.forEach(section => observer.observe(section));
+    </script>
+</body>
+
+</html>
